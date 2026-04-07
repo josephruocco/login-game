@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.loginButton {
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    user-select: none;
+}
+
+/* Login form */
+#login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px 28px;
+    z-index: 500;
+    text-align: center;
+}
+
+#login-form h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+#login-form input {
+    display: block;
+    width: 200px;
+    margin: 8px auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+}
+
+#login-form button {
+    margin-top: 12px;
+    padding: 8px 24px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#login-error {
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
+    height: 18px;
+}
+
+/* Sticky note */
+#sticky-note {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(140px, -60px) rotate(-3deg);
+    width: 200px;
+    padding: 16px 14px;
+    background: #fffb8f;
+    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    z-index: 1001;
+    cursor: pointer;
+    transition: none;
+}
+
+#sticky-note .password {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 4px 0;
+}
+
+#sticky-note .error {
+    color: #c0392b;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+#sticky-note.falling {
+    transition: top 0.8s cubic-bezier(0.55, 0, 1, 0.45),
+                opacity 0.8s ease,
+                transform 0.8s ease;
+    top: 120%;
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(140px, 0px) rotate(15deg);
+}
